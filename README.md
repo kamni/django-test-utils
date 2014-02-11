@@ -11,18 +11,18 @@ from the git repository:
 
 ## Usage
 
-Currently there is a make_user function in model_utils.py. Any parameters that
-you would pass to the User.objects.create method, you can pass to make_user;
-however, if no parameters are passed then make_user will simply generate sane
+Currently there is a TestUser function in model_utils.py. Any parameters that
+you would pass to the User.objects.create method, you can pass to TestUser;
+however, if no parameters are passed then TestUser will simply generate sane
 defaults.
 
-By default, all users created by the make_user function will be non-superuser,
+By default, all users created by the TestUser function will be non-superuser,
 non-staff users.  The default password for users is "test1234".
 
-Examples:
+Example Usage:
 
-    user = make_user()
+    user = TestUser()
 
-    user = make_user(first_name="Warren", last_name="Piece", password="password")
+    user = TestUser(first_name="Warren", last_name="Piece", password="password")
 
-    user = make_user(is_staff=True, is_superuser=True)
+    user = TestUser(is_staff=True, is_superuser=True)
