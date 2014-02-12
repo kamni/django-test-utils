@@ -4,6 +4,17 @@ fields.
 """
 import random
 
+from django.contrib.webdesign.lorem_ipsum import words
+
+
+def lorem_ipsum(word_count):
+    """
+    Generates a 'lorem ipsum' string of the specified length in words.
+    
+    :param words: number of words to generate
+    :return: string
+    """
+    return words(word_count, common=False)
 
 def random_name():
     """ 
