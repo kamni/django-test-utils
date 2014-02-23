@@ -3,6 +3,7 @@ A module to generate various pseudo-random values for use in tests and model
 fields.
 """
 import random
+import string
 
 from django.contrib.webdesign.lorem_ipsum import words
 
@@ -15,6 +16,7 @@ def lorem_ipsum(word_count):
     :return: string
     """
     return words(word_count, common=False)
+
 
 def random_name():
     """ 
@@ -84,3 +86,15 @@ def random_name():
                    'Wilson', 'Wood', 'Woods', 'Wright', 'Young']
 
     return random.choice(_first_names), random.choice(_last_names)
+
+
+def random_string(min=5, max=12):
+    """
+    Generates a random string of characters from string.lowercase
+    
+    :param min: fewest number of characters to generate
+    :param max: most number of characters to generate
+    :return: string
+    """
+    return "".join([random.choice(string.lowercase) 
+                    for i in range(random.choice(range(min, max+1)))])
