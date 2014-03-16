@@ -4,6 +4,7 @@ fields.
 """
 import random
 import string
+import uuid
 
 from django.contrib.webdesign.lorem_ipsum import words
 
@@ -98,3 +99,16 @@ def random_string(min=5, max=12):
     """
     return "".join([random.choice(string.lowercase) 
                     for i in range(random.choice(range(min, max+1)))])
+
+def random_uid():
+    """
+    Creates a randomly-generated UUID.
+    
+    Note: this can be done easily using Python's uuid4() method, but it's nice
+    to have a method that doesn't require you to remember which of Python's
+    UUID methods you should be using when you need to do testing.
+    
+    :return: string
+    """
+    return uuid.uuid4()
+    

@@ -4,7 +4,7 @@ from setuptools import setup, find_packages
 ROOT = os.path.abspath(os.path.dirname(__file__))
 
 base_config = {'name': 'django_test_utils',
-               'version': '0.0.2',
+               'version': '0.1a4',
                'description': 'A collection of utilities for testing Django apps.',
                'long_description': open(os.path.join(ROOT, 'README.md')).read(),
                'author': 'J Leadbetter',
